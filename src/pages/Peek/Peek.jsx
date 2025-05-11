@@ -1,3 +1,5 @@
+import { BeakerIcon } from '@heroicons/react/24/solid'
+
 function Peek() {
     return (
         <>
@@ -9,6 +11,8 @@ function Peek() {
                     filter: 'drop-shadow(0 0 10px rgba(0, 200, 255, 0.8))'
                 }}
             />
+
+            <BeakerIcon />
         </>
     )
 }
