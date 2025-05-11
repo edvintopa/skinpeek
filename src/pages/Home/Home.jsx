@@ -1,3 +1,7 @@
+// Search bar
+// Favourite players (localStorage)
+// Search navigates to /peek/<username>
+
 function Home() {
   return (
     <>
