@@ -1,21 +1,23 @@
 function SkinView( {playerUUID} ) {
     return (
-        <div>
-            <img
-                src={`https://crafatar.com/renders/body/${playerUUID}`}
-                alt="Logo"
-                className="filter drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
-            />
+        <div className="flex items-center justify-center gap-40">
+            
             <img
                 src={`https://crafatar.com/avatars/${playerUUID}`}
                 alt="Logo"
-                className="filter drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+                className="filter drop-shadow-[0_0_10px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] w-32"
+            />
+
+            <img
+                src={`https://crafatar.com/renders/body/${playerUUID}`}
+                alt="Logo"
+                className="filter drop-shadow-[0_0_10px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
             />
 
             <img
                 src={`https://crafatar.com/renders/head/${playerUUID}`}
                 alt="Logo"
-                className="filter drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+                className="filter drop-shadow-[0_0_10px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] w-32"
             />
         </div>
     )
