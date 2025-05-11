@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/peek' element={<Peek />} />
+          <Route path='/peek/:player' element={<Peek />} />
         </Routes>
       </Router>
     </>
