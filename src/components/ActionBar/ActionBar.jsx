@@ -2,14 +2,21 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { ArrowLeftCircleIcon, StarIcon } from "@heroicons/react/24/outline"
 import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid"
+import { star, unStar, isStarred } from "../../utils/localStorageUtils"
 
 function ActionBar({ player }) {
-    const [starred, setStarred] = useState(false)
+    // Load localStorage and check if the user is starred
+    const [starred, setStarred] = useState(() => isStarred(player))
     const navigate = useNavigate();
 
     const toggleStar = () => {
-        setStarred(s => !s)
-        //placehpler for localStorage
+        if (starred) {
+            unStar(player)
+            setStarred(false)
+        } else {
+            star(player)
+            setStarred(true)
+        }
     }
 
     return (
