@@ -1,7 +1,20 @@
-function SkinView( {playerUUID} ) {
+function SkinView({ playerUUID }) {
+    if (!playerUUID) {
+        return (
+            <div>
+                <p className="text-4xl text-red-500 font-bold">
+                    404
+                </p>
+                <p className="text-xl">
+                    Hmm... We couldn't find this one.
+                </p>
+            </div>
+        )
+    }
+
     return (
         <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-40">
-            
+
             <img
                 src={`https://crafatar.com/avatars/${playerUUID}`}
                 alt="Logo"
