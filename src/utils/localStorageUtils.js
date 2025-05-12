@@ -26,9 +26,16 @@ function isStarred(player) {
     return getAllStarred().some(p => p.player === player)
 }
 
+// Return stored UUID of a player
+function getUuid(player) {
+    const starredPlayers = getAllStarred();
+    return starredPlayers.find(p => p.player == player).uuid;
+}
+
 export {
     getAllStarred,
     star,
     unStar,
-    isStarred
+    isStarred,
+    getUuid
 }
