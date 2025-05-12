@@ -6,7 +6,7 @@ function ActionBar({ player, starred, onToggleStar }) {
   const navigate = useNavigate()
 
   return (
-    <div className="flex items-center justify-center gap-10 mt-20">
+    <div className="mb-20 md:mb-0 flex items-center justify-center gap-10">
       <ArrowLeftCircleIcon
         onClick={() => navigate("/")}
         className="w-10 cursor-pointer hover:text-neutral-500"
