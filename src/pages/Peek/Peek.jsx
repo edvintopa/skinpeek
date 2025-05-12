@@ -31,12 +31,17 @@ function Peek() {
         
     }
 
+    const downloadSkin = () => {
+        window.open(`https://crafatar.com/skins/${uuid}`, '_blank')
+    }
+
     return (
         <div className="flex flex-col md:flex-col-reverse gap-10 md:gap-30">
             <ActionBar
                 player={player}
                 starred={starred}
                 onToggleStar={toggleStar}
+                onDownload={downloadSkin}
             />
             <SkinView playerUUID={uuid} />
         </div>
