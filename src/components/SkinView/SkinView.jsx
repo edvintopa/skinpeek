@@ -1,6 +1,6 @@
 function SkinView( {playerUUID} ) {
     return (
-        <div className="flex items-center justify-center gap-40">
+        <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-40">
             
             <img
                 src={`https://crafatar.com/avatars/${playerUUID}`}

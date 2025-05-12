@@ -32,14 +32,14 @@ function Peek() {
     }
 
     return (
-        <>
-            <SkinView playerUUID={uuid} />
+        <div className="flex flex-col md:flex-col-reverse gap-10 md:gap-30">
             <ActionBar
                 player={player}
                 starred={starred}
                 onToggleStar={toggleStar}
             />
-        </>
+            <SkinView playerUUID={uuid} />
+        </div>
     )
 }
 
