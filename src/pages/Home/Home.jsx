@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getAllStarred } from "../../utils/localStorageUtils"
+import SearchBar from "../../components/SearchBar/SearchBar";
+import FavoriteList from "../../components/FavoriteList/FavoriteList";
 
 
 // Search bar
@@ -27,15 +29,9 @@ function Home() {
     <>
       <div>
         <h1>SKINPEEK</h1>
-        <div>
-          <input 
-            type="text"
-            placeholder="Sök Spelare..."
-            className="input input-bordered"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)} 
-          />
-          <button></button>
+        <div className="p-4 flex flex-col gap-6">
+            <SearchBar query={query} setQuery={setQuery} onSearch={handleSearch} />
+            <FavoriteList favorites={Favourite} />
         </div>
       </div>
     </>
