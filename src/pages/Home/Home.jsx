@@ -21,6 +21,7 @@ function Home() {
 
   const handleSearch = () => {
     if (query.trim()){
+      
       navigate(`/peek/${query.trim()}`);
     }
   };

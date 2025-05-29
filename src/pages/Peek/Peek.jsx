@@ -8,7 +8,8 @@ function Peek() {
     const { player } = useParams()
     const [starred, setStarred] = useState(() => isStarred(player))
     const [uuid, setUuid] = useState("75c2128d-ce64-4a4f-99e0-1d950a577394")    //remove later
-
+    console.log(playerUUID);
+    console.log(player + " what is this ?");
     useEffect(() => {
 
         if (starred) {
