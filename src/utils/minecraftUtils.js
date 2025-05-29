@@ -11,8 +11,8 @@ async function fetchUser(minecraftUsername) {
     }
 
     const minecraftUser = await response.json();
-
     console.log(minecraftUser);
+    
     return minecraftUser;
 }
 
