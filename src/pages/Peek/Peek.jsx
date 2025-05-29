@@ -3,19 +3,23 @@ import { useParams } from "react-router-dom"
 import ActionBar from "../../components/ActionBar/ActionBar"
 import SkinView from "../../components/SkinView/SkinView"
 import { star, unStar, isStarred, getUuid } from "../../utils/localStorageUtils"
+import { fetchUser } from "../../utils/minecraftUtils"
 
 function Peek() {
     const { player } = useParams()
     const [starred, setStarred] = useState(() => isStarred(player))
     const [uuid, setUuid] = useState("75c2128d-ce64-4a4f-99e0-1d950a577394")    //remove later
-    console.log(playerUUID);
-    console.log(player + " what is this ?");
     useEffect(() => {
 
         if (starred) {
             setUuid(getUuid(player));
         } else {
-            // use api
+            const fetchData = async () => {
+                const minecraftPlayer = await fetchUser(player);
+                const minecraftUUID = minecraftPlayer.data.player.id;
+                setUuid(minecraftUUID);
+            };
+            fetchData();
         }
 
     }, [player])
@@ -33,7 +37,7 @@ function Peek() {
     }
 
     const downloadSkin = () => {
-        window.open(`https://crafatar.com/skins/${uuid}`, '_blank')
+        window.open(`https://crafatar.com/skins/${player}`, '_blank')
     }
 
     return (
