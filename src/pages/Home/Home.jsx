@@ -41,8 +41,8 @@ function Home() {
   return (
     <>
       <div>
-        <h1>SKINPEEK</h1>
         <div className="p-4 flex flex-col gap-6">
+            <h1>SKINPEEK</h1>
             <SearchBar query={query} setQuery={setQuery} onSearch={handleSearch} />
             <FavoriteList favorites={sortedFavorites} />
             <SortButtons sortOrder={sortOrder} onChange={setSortOrder}/>

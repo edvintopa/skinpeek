@@ -6,7 +6,7 @@ function FavoriteList({ favorites }) {
     if (favorites.length === 0 || !favorites) return <p>No favorite player saved.</p>;
 
     return (
-        <ul className="grid grid-cols-1 gap-4 shadow-md" id="testarNu">
+        <ul className="flex flex-col gap-3 w-full px-2 sm:px-4">
             {favorites.map(({ player }) => (
                 <li
                     key={player}
