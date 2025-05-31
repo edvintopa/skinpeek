@@ -37,7 +37,7 @@ function Peek() {
     }
 
     const downloadSkin = () => {
-        window.open(`https://crafatar.com/skins/${player}`, '_blank')
+        window.open(`https://crafatar.com/skins/${uuid}`, '_blank')
     }
 
     return (
